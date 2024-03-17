@@ -2,6 +2,7 @@
 import time
 import multiprocessing
 
+# To use this function in factorize_parallel function
 def calculate_factors(num):
     return [i for i in range(1, num + 1) if num % i == 0]
 
@@ -10,6 +11,7 @@ def factorize_synchronized(*numbers):
     for num in numbers:
         factors.append([i for i in range(1, num + 1) if num % i == 0])
     return factors
+
 
 def factorize_parallel(*numbers):    
     with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
