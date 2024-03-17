@@ -1,4 +1,4 @@
-# The first part for threading
+# The first part for threading (read details and instructions in README.md)
 import sys
 import re
 import os
